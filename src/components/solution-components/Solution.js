@@ -6,6 +6,8 @@ const SolutionBlock = styled.div`
   min-width: 0;
   border-radius: 10px;
   box-shadow: -1px 7px 32px -10px rgba(255, 187, 187, 0.75);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 
   .thumb-container {
     background: var(--salmon-dark);
@@ -17,7 +19,13 @@ const SolutionBlock = styled.div`
   }
 
   .challenge-container {
-    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .challenge-padding {
+      padding: 1rem 1rem;
+    }
 
     .challenge-title {
       font-weight: 600;
@@ -27,7 +35,6 @@ const SolutionBlock = styled.div`
     }
 
     .challenge-built-with {
-      margin-bottom: 1rem;
       .tag {
         display: inline-block;
         background: grey;
@@ -36,46 +43,44 @@ const SolutionBlock = styled.div`
         padding: 0 15px;
         margin-right: 5px;
         background: var(--light-grey-blue);
-    }
-
-    .challenge-links {
-      border-top: 1px solid var(--salmon);
-      padding-top: 1rem;
-
-      li {
-        display: flex;
-        align-items: center;
-
-        svg {
-          color: var(--yellow);
-          margin-right: 10px;
-        }
       }
+    }
+  }
+  .view-links {
+    border-top: 1px solid pink;
+
+    > div {
+      display: flex;
+      justify-content: space-around;
     }
   }
 `;
 
 export const Solution = ({ data }) => {
-  console.log(data);
   return (
     <SolutionBlock bg={data.thumb[0].url}>
       <div className="thumb-container"></div>
       <div className="challenge-container">
-        <p className="challenge-title">{data.challenge}</p>
-        <div className="challenge-built-with">
-          {data.built.map((builtwith) => (
-            <span className="tag">{builtwith}</span>
-          ))}
+        <div className="challenge-padding">
+          <p className="challenge-title">{data.challenge}</p>
+          <div className="challenge-built-with">
+            {data.built.map((builtwith) => (
+              <span key={builtwith} className="tag">
+                {builtwith}
+              </span>
+            ))}
+          </div>
         </div>
-        <ul className="challenge-links">
-          <li>
-            <FaGithub />
-            <a href={data.live}>View Code</a>
-          </li>
-          <li>
-            <FaExternalLinkAlt />
-            <a href={data.live}>Live Site</a>
-          </li>
+
+        <ul className="view-links">
+          <div className="challenge-padding">
+            <li>
+              <a href={data.live}>View Code</a>
+            </li>
+            <li>
+              <a href={data.live}>Live Site</a>
+            </li>
+          </div>
         </ul>
       </div>
     </SolutionBlock>
