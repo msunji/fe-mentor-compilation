@@ -6,14 +6,11 @@ import { Solution } from "./Solution";
 const SolutionsSection = styled.section``;
 
 const SolutionsContainer = styled(Container)`
-  background: white;
-  width: 100%;
   height: auto;
-  border: 1px solid red;
   padding: var(--padding-y) var(--padding-x);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 1.5rem;
   grid-template-rows: repeat(auto-fill, 1fr);
 `;
 
