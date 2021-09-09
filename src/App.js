@@ -1,11 +1,18 @@
 import GlobalStyle from "./styles/globalStyle";
+import styled from "styled-components";
+import { Nav } from "./components/layout/Nav";
+import { IntroText } from "./components/IntroText";
+import { Solutions } from "./components/solution-components/Solutions";
 
 function App() {
   return (
     <>
+      <Nav />
       <GlobalStyle />
-      <div>Test</div>
-      <div>Test</div>
+      <main>
+        <IntroText />
+        <Solutions />
+      </main>
     </>
   );
 }
