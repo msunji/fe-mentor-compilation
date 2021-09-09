@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     letter-spacing: 0.9px;
     color: var(--dark-blue);
-    background: linear-gradient(180deg, var(--beige) 30em, var(--white) 30em);
+    background: linear-gradient(180deg, var(--yellow) 30em, var(--white) 30em);
   }
   h1 {
     font-size: 1.94em;

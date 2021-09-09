@@ -3,7 +3,7 @@ import { Container } from "./Container";
 
 const NavStyling = styled.nav`
   border-bottom: 1px solid var(--black);
-  background: var(--beige);
+  background: var(--yellow);
 `;
 
 const NavContainer = styled(Container)`
