@@ -3,7 +3,19 @@ import { Container } from "../layout/Container";
 import { useEffect, useState } from "react";
 import { Solution } from "./Solution";
 
-const SolutionsGrid = styled.section``;
+const SolutionsSection = styled.section``;
+
+const SolutionsContainer = styled(Container)`
+  background: white;
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  padding: var(--padding-y) var(--padding-x);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-template-rows: repeat(auto-fill, 1fr);
+`;
 
 export const Solutions = () => {
   const [solutions, setSolutions] = useState([]);
@@ -23,13 +35,12 @@ export const Solutions = () => {
   }, []);
 
   return (
-    <SolutionsGrid>
-      <Container>
-        <p>List solutions here</p>
+    <SolutionsSection>
+      <SolutionsContainer>
         {solutions.map((solution) => (
           <Solution key={solution.id} data={solution} />
         ))}
-      </Container>
-    </SolutionsGrid>
+      </SolutionsContainer>
+    </SolutionsSection>
   );
 };
