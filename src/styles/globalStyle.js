@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
     --padding-x: 2rem;
     --dark-blue: rgb(21, 45, 53);
     --blue: rgb(0,99,161);
-    --teal: rgb(255, 179, 68);
     --yellow: #fcde67;
     --white: #fff;
     --beige: rgb(255, 248, 229);
@@ -72,6 +71,12 @@ const GlobalStyle = createGlobalStyle`
   
   section {
     padding: var(--padding-y) 0;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 600;
   }
 `;
 
