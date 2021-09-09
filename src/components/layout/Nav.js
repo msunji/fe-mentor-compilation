@@ -2,23 +2,25 @@ import styled from "styled-components";
 import { Container } from "./Container";
 
 const NavStyling = styled.nav`
-  border-bottom: 1px solid var(--salmon-dark);
-  background: var(--salmon);
+  border-bottom: 1px solid var(--black);
+  background: var(--beige);
 `;
 
 const NavContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
+  padding: var(--padding-y) 0;
 
   .site-title {
     line-height: 1.1;
     font-weight: 600;
+    font-size: 1.5em;
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-right: 1rem;
-    border-right: 1px solid var(--salmon-dark);
-    color: var(--blue);
+    border-right: 1px solid var(--black);
+    color: var(--red);
   }
   .nav-links {
     display: flex;
