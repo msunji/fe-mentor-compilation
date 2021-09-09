@@ -7,11 +7,14 @@ const GlobalStyle = createGlobalStyle`
     --urbanist: 'Urbanist', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
-    --blue: #1c39c2;
+    --dark-blue: rgb(21, 45, 53);
+    --blue: rgb(0,99,161);
+    --teal: rgb(255, 179, 68);
     --yellow: #fcde67;
     --white: #fff;
-    --salmon: #fae5df;
-    --salmon-dark: #e98f8f;
+    --beige: rgb(255, 248, 229);
+    --red: rgb(224, 93, 93);
+    --light-grey-blue: rgb(232, 246, 239);
   }
   *,
   *:before,
@@ -26,8 +29,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.9px;
-    color: var(--salmon-dark);
-    background: linear-gradient(180deg, var(--salmon) 28%, var(--white) 28%);
+    color: var(--dark-blue);
+    background: linear-gradient(180deg, var(--beige) 30em, var(--white) 30em);
   }
   h1 {
     font-size: 1.94em;
