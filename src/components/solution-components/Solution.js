@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const SolutionBlock = styled.div`
   background: white;
@@ -15,6 +15,7 @@ const SolutionBlock = styled.div`
     width: 100%;
     background-image: url(${(props) => props.bg});
     background-size: cover;
+    background-position: center;
     border-radius: 10px 10px 0 0;
   }
 
@@ -47,11 +48,23 @@ const SolutionBlock = styled.div`
     }
   }
   .view-links {
-    border-top: 1px solid pink;
+    border-top: 1px solid rgba(255, 187, 187, 0.75);
+    display: flex;
+    justify-content: flex-start;
 
-    > div {
-      display: flex;
-      justify-content: space-around;
+    li {
+      font-size: 0.85em;
+      display: inline-flex;
+      align-items: center;
+
+      svg {
+        color: var(--blue);
+        margin-right: 6px;
+      }
+      a,
+      a:visited {
+        color: var(--red);
+      }
     }
   }
 `;
@@ -73,14 +86,14 @@ export const Solution = ({ data }) => {
         </div>
 
         <ul className="view-links">
-          <div className="challenge-padding">
-            <li>
-              <a href={data.live}>View Code</a>
-            </li>
-            <li>
-              <a href={data.live}>Live Site</a>
-            </li>
-          </div>
+          <li className="challenge-padding">
+            <FiGithub />
+            <a href={data.live}>View Code</a>
+          </li>
+          <li className="challenge-padding">
+            <FiExternalLink />
+            <a href={data.live}>Live Site</a>
+          </li>
         </ul>
       </div>
     </SolutionBlock>
