@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     --red: rgb(224, 93, 93);
     --light-grey-blue: rgb(232, 246, 239);
     --salmon: #ef9273;
+    --salmon-light: rgba(255, 187, 187, 0.75);
   }
   *,
   *:before,
