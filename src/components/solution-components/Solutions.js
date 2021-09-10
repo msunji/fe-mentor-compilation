@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SkeletonCard } from "../layout/SkeletonCard";
 import { Container } from "../layout/Container";
 import { useEffect, useState } from "react";
 import { Solution } from "./Solution";
@@ -34,9 +35,11 @@ export const Solutions = () => {
   return (
     <SolutionsSection>
       <SolutionsContainer>
-        {solutions.map((solution) => (
-          <Solution key={solution.id} data={solution} />
-        ))}
+        {solutions.length
+          ? solutions.map((solution) => (
+              <Solution key={solution.id} data={solution} />
+            ))
+          : [1, 2, 3].map((_, i) => <SkeletonCard key={i} />)}
       </SolutionsContainer>
     </SolutionsSection>
   );
