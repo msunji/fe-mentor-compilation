@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --urbanist: 'Urbanist', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
-    --dark-blue: rgb(21, 45, 53);
+    --brown: rgb(100 76 59);
     --blue: rgb(0,99,161);
     --yellow: #fcde67;
     --white: #fff;
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.9px;
-    color: var(--dark-blue);
+    color: var(--brown);
     background: linear-gradient(180deg, var(--yellow) 30em, var(--white) 30em);
   }
 
