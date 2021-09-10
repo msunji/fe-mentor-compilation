@@ -31,6 +31,12 @@ const GlobalStyle = createGlobalStyle`
     color: var(--dark-blue);
     background: linear-gradient(180deg, var(--yellow) 30em, var(--white) 30em);
   }
+
+  #root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
   h1 {
     font-size: 1.94em;
     line-height: 1.54em;
@@ -60,6 +66,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.50em;
     padding-top: 0.389em;
     margin-bottom: 1.11em;
+  }
+
+  main {
+    flex: 1;
   }
   
   p {
