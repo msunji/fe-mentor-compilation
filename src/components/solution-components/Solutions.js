@@ -10,9 +10,17 @@ const SolutionsContainer = styled(Container)`
   height: auto;
   padding: var(--padding-y) var(--padding-x);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   grid-template-rows: repeat(auto-fill, 1fr);
+  padding: 0;
+
+  @media screen and (min-width: 740px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const Solutions = () => {
