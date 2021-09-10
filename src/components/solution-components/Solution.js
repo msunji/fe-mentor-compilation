@@ -10,7 +10,7 @@ const SolutionBlock = styled.div`
   grid-template-rows: 1fr 1fr;
 
   .thumb-container {
-    background: var(--salmon-dark);
+    background: var(--salmon);
     min-height: 250px;
     width: 100%;
     background-image: url(${(props) => props.bg});
