@@ -48,8 +48,10 @@ export const Nav = () => {
         </p>
 
         <ul className="nav-links">
-          <li>Portfolio</li>
-          <li>light/dark</li>
+          <li>
+            <a href="http://mconsunji.com">Portfolio</a>
+          </li>
+          {/* <li>light/dark</li> */}
         </ul>
       </NavContainer>
     </NavStyling>
