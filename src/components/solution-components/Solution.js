@@ -88,7 +88,7 @@ export const Solution = ({ data }) => {
         <ul className="view-links">
           <li className="challenge-padding">
             <FiGithub />
-            <a href={data.live}>View Code</a>
+            <a href={data.repo}>View Code</a>
           </li>
           <li className="challenge-padding">
             <FiExternalLink />
