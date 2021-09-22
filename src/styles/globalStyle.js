@@ -31,7 +31,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     letter-spacing: 0.9px;
     color: var(--brown);
-    background: linear-gradient(180deg, var(--yellow) 30em, var(--white) 30em);
   }
 
   #root {
