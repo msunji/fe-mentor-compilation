@@ -2,100 +2,134 @@ import styled from "styled-components";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const SolutionBlock = styled.div`
+  overflow: hidden;
+  padding: 4rem;
   background: white;
   min-width: 0;
-  border-radius: 10px;
-  box-shadow: -1px 7px 32px -10px rgba(255, 187, 187, 0.75);
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content 1fr auto auto;
 
-  .thumb-container {
-    background: var(--salmon);
-    min-height: 250px;
-    width: 100%;
-    background-image: url(${(props) => props.bg});
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid var(--dark-grey);
+
+  &:not(:nth-child(3n)) {
+    border-right: 1px solid var(--dark-grey);
+  }
+`;
+
+const Thumb = styled.div`
+  background: var(--dark-grey);
+  min-height: 250px;
+  width: 100%;
+  background-image: url(${(props) => props.bg});
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1.5rem;
+`;
+
+const Tags = styled.ul`
+  margin-bottom: 1rem;
+  li {
+    display: inline-block;
+    background: var(--dark-grey);
+    border: 2px solid var(--dark-grey);
+    border-radius: 9px;
+    font-size: 0.8em;
+    padding: 3px 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: white;
+  }
+`;
+
+const Links = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-top: 0;
+    font-size: 2em;
   }
 
-  .challenge-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .challenge-padding {
-      padding: 1rem 1rem;
-    }
-
-    .challenge-title {
-      font-weight: 600;
-      color: var(--red);
-      font-size: 1.2em;
-      line-height: 1.3;
-    }
-
-    .challenge-built-with {
-      .tag {
-        display: inline-block;
-        background: grey;
-        border-radius: 10em;
-        font-size: 0.8em;
-        padding: 0 15px;
-        margin-right: 5px;
-        background: var(--light-grey-blue);
-      }
-    }
+  .line {
+    width: 70%;
+    max-width: 150px;
+    background: black;
+    height: 1px;
   }
-  .view-links {
-    border-top: 1px solid rgba(255, 187, 187, 0.75);
-    display: flex;
-    justify-content: flex-start;
 
-    li {
-      font-size: 0.85em;
-      display: inline-flex;
-      align-items: center;
+  li {
+    font-size: 2em;
+    display: inline-flex;
+    align-items: center;
 
-      svg {
-        color: var(--blue);
-        margin-right: 6px;
-      }
-      a,
-      a:visited {
-        color: var(--red);
-      }
+    svg {
+      margin-right: 6px;
+    }
+    a,
+    a:visited {
+      color: var(--dark-grey);
     }
   }
 `;
 
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  .num {
+    padding: 0;
+    margin: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+  }
+`;
+
+const Title = styled.p`
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.1;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0.8rem;
+  margin: 0;
+  text-transform: uppercase;
+`;
+
 export const Solution = ({ data }) => {
   return (
-    <SolutionBlock bg={data.thumb[0].url}>
-      <div className="thumb-container"></div>
-      <div className="challenge-container">
-        <div className="challenge-padding">
-          <p className="challenge-title">{data.challenge}</p>
-          <div className="challenge-built-with">
-            {data.built.map((builtwith) => (
-              <span key={builtwith} className="tag">
-                {builtwith}
-              </span>
-            ))}
-          </div>
-        </div>
+    <SolutionBlock>
+      <Header>
+        <Title>{data.challenge}</Title>
+        <p className="num">{data.numKey}</p>
+      </Header>
 
-        <ul className="view-links">
-          <li className="challenge-padding">
-            <FiGithub />
-            <a href={data.repo}>View Code</a>
+      <Thumb bg={data.thumb[0].url} />
+      <Tags>
+        {data.built.map((builtwith) => (
+          <li key={builtwith} className="tag">
+            {builtwith}
           </li>
-          <li className="challenge-padding">
-            <FiExternalLink />
-            <a href={data.live}>Live Site</a>
+        ))}
+      </Tags>
+
+      <Links>
+        <p>View</p>
+        <div className="line"></div>
+        <ul>
+          <li>
+            <a href={data.repo}>
+              <FiGithub alt="View Repo" />
+            </a>
+          </li>
+          <li>
+            <a href={data.live}>
+              <FiExternalLink alt="View Live Site" />
+            </a>
           </li>
         </ul>
-      </div>
+      </Links>
     </SolutionBlock>
   );
 };
