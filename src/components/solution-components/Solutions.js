@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { SkeletonCard } from "../layout/SkeletonCard";
-import { Container } from "../layout/Container";
 import { useEffect, useState } from "react";
 import { Solution } from "./Solution";
 

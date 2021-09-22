@@ -12,7 +12,7 @@ const SolutionBlock = styled.div`
   border-bottom: 1px solid var(--dark-grey);
   border-right: none;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 740px) and (max-width: 1099px) {
     &:not(:nth-child(2n)) {
       border-right: 1px solid var(--dark-grey);
     }
@@ -60,13 +60,6 @@ const Links = styled.div`
     margin-bottom: 0;
     padding-top: 0;
     font-size: 2em;
-  }
-
-  .line {
-    width: 70%;
-    max-width: 150px;
-    background: black;
-    height: 1px;
   }
 
   li {
