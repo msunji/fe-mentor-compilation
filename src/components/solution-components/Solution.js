@@ -10,9 +10,18 @@ const SolutionBlock = styled.div`
   grid-template-rows: min-content 1fr auto auto;
 
   border-bottom: 1px solid var(--dark-grey);
+  border-right: none;
 
-  &:not(:nth-child(3n)) {
-    border-right: 1px solid var(--dark-grey);
+  @media screen and (min-width: 740px) {
+    &:not(:nth-child(2n)) {
+      border-right: 1px solid var(--dark-grey);
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid var(--dark-grey);
+    }
   }
 `;
 
