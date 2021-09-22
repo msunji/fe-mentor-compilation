@@ -12,6 +12,7 @@ function App() {
         <IntroText />
         <Solutions />
       </main>
+      <Footer />
     </>
   );
 }
