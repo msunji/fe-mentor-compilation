@@ -4,9 +4,10 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   ${reset}
   :root {
-    --urbanist: 'Urbanist', sans-serif;
+    --sans-serif: 'Arimo', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
+    --dark-grey: #030302;
     --brown: rgb(100 76 59);
     --blue: rgb(0,99,161);
     --yellow: #fcde67;
@@ -22,15 +23,20 @@ const GlobalStyle = createGlobalStyle`
   *:after {
     box-sizing: border-box
   }
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   html,
   body {
     overflow-x: hidden;
     min-height: 100vh;
-    font-family: var(--urbanist);
+    font-weight: 400;
+    font-family: var(--sans-serif);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.9px;
-    color: var(--brown);
+    color: var(--dark-grey);
   }
 
   #root {
@@ -78,10 +84,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.50em;
     padding-top: 0.389em;
     margin-bottom: 1.11em;
-  }
-  
-  section {
-    padding: var(--padding-y) 0;
   }
 
   a, a:visited {
