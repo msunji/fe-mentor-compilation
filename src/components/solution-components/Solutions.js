@@ -4,14 +4,11 @@ import { Container } from "../layout/Container";
 import { useEffect, useState } from "react";
 import { Solution } from "./Solution";
 
-const SolutionsSection = styled.section``;
-
-const SolutionsContainer = styled(Container)`
+const SolutionsSection = styled.section`
   height: auto;
   padding: var(--padding-y) var(--padding-x);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
   grid-template-rows: repeat(auto-fill, 1fr);
   padding: 0;
 
@@ -42,13 +39,11 @@ export const Solutions = () => {
 
   return (
     <SolutionsSection>
-      <SolutionsContainer>
-        {solutions.length
-          ? solutions.map((solution) => (
-              <Solution key={solution.id} data={solution} />
-            ))
-          : [1, 2, 3].map((_, i) => <SkeletonCard key={i} />)}
-      </SolutionsContainer>
+      {solutions.length
+        ? solutions.map((solution) => (
+            <Solution key={solution.id} data={solution} />
+          ))
+        : [1, 2, 3].map((_, i) => <SkeletonCard key={i} />)}
     </SolutionsSection>
   );
 };
