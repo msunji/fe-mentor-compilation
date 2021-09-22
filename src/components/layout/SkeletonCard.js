@@ -3,9 +3,25 @@ import styled from "styled-components";
 const StyledSkeleton = styled.div`
   background: #fff;
   min-width: 0;
-  border-radius: 10px;
-  box-shadow: -1px 7px 32px -10px rgba(255, 187, 187, 0.75);
   min-height: 300px;
+  overflow: hidden;
+  padding: 4rem;
+  background: white;
+
+  border-bottom: 1px solid var(--dark-grey);
+  border-right: none;
+
+  @media screen and (min-width: 740px) and (max-width: 1099px) {
+    &:not(:nth-child(2n)) {
+      border-right: 1px solid var(--dark-grey);
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid var(--dark-grey);
+    }
+  }
 
   .skeleton {
     &-container {
@@ -16,29 +32,48 @@ const StyledSkeleton = styled.div`
 
     &-thumb {
       width: 100%;
-      height: 150px;
-      background: var(--salmon-light);
-      margin-bottom: 10px;
-      border-radius: 10px 10px 0 0;
-    }
-    &-info-container {
-      padding: 1rem 1rem;
+      height: 200px;
+      background: grey;
+      margin-bottom: 2rem;
     }
     &-title {
-      width: 100%;
-      height: 20px;
-      background: var(--salmon-light);
-      margin-bottom: 15px;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-text {
+        width: 46%;
+        height: 30px;
+        background: grey;
+      }
+
+      &-num {
+        width: 19%;
+        height: 50px;
+        background: grey;
+      }
     }
     &-view-links {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      align-items: center;
 
-      li {
-        width: 90px;
-        height: 15px;
-        display: inline-flex;
-        background: var(--salmon-light);
+      &-text {
+        height: 40px;
+        width: 40%;
+        background: grey;
+      }
+
+      &-icons {
+        display: flex;
+        li {
+          width: 30px;
+          height: 30px;
+          display: inline-flex;
+          background: grey;
+          margin-left: 10px;
+        }
       }
     }
     &-tags {
@@ -49,10 +84,11 @@ const StyledSkeleton = styled.div`
       li {
         display: inline-flex;
         margin-right: 10px;
-        background: var(--salmon-light);
-        height: 18px;
-        width: 70px;
-        border-radius: 10px;
+        margin-bottom: 10px;
+        background: grey;
+        height: 24px;
+        width: 90px;
+        border-radius: 9px;
       }
     }
   }
@@ -62,18 +98,24 @@ export const SkeletonCard = ({ type }) => {
   return (
     <StyledSkeleton>
       <div className="skeleton-container">
+        <div className="skeleton-title">
+          <div className="skeleton-title-text"></div>
+          <div className="skeleton-title-num"></div>
+        </div>
         <div className="skeleton-thumb"></div>
         <div className="skeleton-info-container">
-          <div className="skeleton-title"></div>
           <ul className="skeleton-tags">
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <ul className="skeleton-view-links">
-            <li></li>
-            <li></li>
-          </ul>
+          <div className="skeleton-view-links">
+            <div className="skeleton-view-links-text"></div>
+            <ul className="skeleton-view-links-icons">
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
         </div>
       </div>
     </StyledSkeleton>
