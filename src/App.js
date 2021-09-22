@@ -7,13 +7,12 @@ import { Footer } from "./components/layout/Footer";
 function App() {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <GlobalStyle />
       <main>
         <IntroText />
         <Solutions />
       </main>
-      <Footer />
     </>
   );
 }
