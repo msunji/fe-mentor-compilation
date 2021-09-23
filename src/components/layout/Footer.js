@@ -3,32 +3,35 @@ import { Container } from "./Container";
 import { FaLinkedin, FaGithubAlt } from "react-icons/fa";
 
 const StyledFooter = styled.footer`
+  background: var(--dark-grey);
+  color: var(--white);
   padding: calc(2 * var(--padding-y)) 0;
   font-size: 0.9em;
 
-  > div {
-    text-align: center;
+  h3 {
+    text-transform: uppercase;
+  }
+`;
+
+const FooterLinks = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 1;
+
+  li:first-of-type {
+    margin-right: 20px;
   }
 
-  .footer-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    line-height: 1;
+  svg {
+    font-size: 2.2em;
+    color: var(--white);
+    transition: all 0.4s ease-in;
+  }
 
-    li:first-of-type {
-      margin-right: 20px;
-    }
-
-    svg {
-      transition: all 0.4s ease-in;
-    }
-
-    svg:hover,
-    svg:focus {
-      color: var(--red);
-    }
+  svg:hover,
+  svg:focus {
+    color: var(--yellow);
   }
 `;
 
@@ -36,8 +39,8 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <p>Find me elsewhere</p>
-        <ul className="footer-links">
+        <h3>Find me elsewhere</h3>
+        <FooterLinks>
           <li>
             <a href="https://github.com/msunji">
               <FaGithubAlt />
@@ -48,7 +51,7 @@ export const Footer = () => {
               <FaLinkedin />
             </a>
           </li>
-        </ul>
+        </FooterLinks>
       </Container>
     </StyledFooter>
   );
