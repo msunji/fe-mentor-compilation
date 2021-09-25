@@ -72,7 +72,13 @@ const Links = styled.div`
     }
     a,
     a:visited {
+      transition: all 0.4s ease;
       color: var(--dark-grey);
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--yellow);
     }
   }
 `;
