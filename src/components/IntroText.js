@@ -14,33 +14,16 @@ const TextContainer = styled(Container)`
   h1 {
     padding-top: 0;
   }
-`;
 
-const Filter = styled.div`
-  margin-left: 3rem;
-
-  .header {
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
+  .about-build {
     color: grey;
+    margin-left: 4rem;
+
+    .header {
+      text-transform: uppercase;
+    }
   }
 `;
-
-const CustomCheckBox = styled.div`
-  // input[type="checkbox"] {
-  //   display: none;
-  // }
-`;
-
-const CheckBox = ({ boxName, inputId }) => {
-  return (
-    <CustomCheckBox>
-      <input type="checkbox" id={inputId} name={inputId} />
-      <label for={boxName}>{boxName}</label>
-    </CustomCheckBox>
-  );
-};
 
 export const IntroText = () => {
   return (
@@ -54,13 +37,13 @@ export const IntroText = () => {
             as I progress through more challenges. Cheers!
           </p>
         </div>
-        <Filter>
-          <p className="header">Show projects built with:</p>
-          <div>
-            <CheckBox boxName="React" inputId="react" />
-            <CheckBox boxName="CSS Grid" inputId="cssgrid" />
-          </div>
-        </Filter>
+        <div className="about-build">
+          <p className="header">about these projects</p>
+          <p>
+            For the most part, I built these projects with React or Next.js and
+            styled-components.
+          </p>
+        </div>
       </TextContainer>
     </Text>
   );
