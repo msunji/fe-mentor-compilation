@@ -9,7 +9,7 @@ const Text = styled.section`
 
 const TextContainer = styled(Container)`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr;
 
   h1 {
     padding-top: 0;
@@ -17,11 +17,24 @@ const TextContainer = styled(Container)`
 
   .about-build {
     color: grey;
-    margin-left: 4rem;
+    margin-top: 3rem;
 
     .header {
       text-transform: uppercase;
+      margin-bottom: 0;
     }
+  }
+
+  @media screen and (min-width: 740px) {
+    grid-template-columns: 1fr 1fr;
+
+    .about-build {
+      margin-left: 4rem;
+      margin-top: 0;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: 1.5fr 1fr;
   }
 `;
 
