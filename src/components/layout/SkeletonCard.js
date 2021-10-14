@@ -1,94 +1,68 @@
 import styled from "styled-components";
+import Skeleton from "react-loading-skeleton";
 
 const StyledSkeleton = styled.div`
-  background: #fff;
-  min-width: 0;
-  min-height: 300px;
   overflow: hidden;
-  padding: 4rem;
-  background: white;
+  background: var(--dark-desat-blue);
+  color: rgb(247, 245, 248);
+  width: 100%;
 
-  border-bottom: 1px solid var(--dark-grey);
-  border-right: none;
-
-  @media screen and (min-width: 740px) and (max-width: 1099px) {
-    &:not(:nth-child(2n)) {
-      border-right: 1px solid var(--dark-grey);
-    }
+  .skeleton-card__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 
+  @media screen and (min-width: 680px) and (max-width: 1199px) {
+    width: calc(1 / 2 * 100% - 20px);
+  }
   @media screen and (min-width: 1100px) {
-    &:not(:nth-child(3n)) {
-      border-right: 1px solid var(--dark-grey);
-    }
+    width: calc(1 / 3 * 100% - 20px);
   }
 
   .skeleton {
-    &-container {
-      display: flex;
-      flex-direction: column;
-      align-content: space-between;
-    }
-
     &-thumb {
+      background: var(--dark-grey);
+      height: 220px;
       width: 100%;
-      height: 200px;
-      background: grey;
-      margin-bottom: 2rem;
+      background: var(--desat-periwinkle);
     }
     &-title {
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 0rem 1rem 0.5rem 1rem;
+      flex-grow: 1;
 
-      &-text {
-        width: 46%;
-        height: 30px;
-        background: grey;
-      }
-
-      &-num {
-        width: 19%;
-        height: 50px;
-        background: grey;
+      &__bg {
+        height: 1.4rem;
+        background: var(--desat-periwinkle);
       }
     }
     &-view-links {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      margin: 0.5em 1rem 1rem 1rem;
+      align-self: flex-end;
+      list-style-type: none;
+      height: 1em;
 
-      &-text {
-        height: 40px;
-        width: 40%;
-        background: grey;
-      }
-
-      &-icons {
-        display: flex;
-        li {
-          width: 30px;
-          height: 30px;
-          display: inline-flex;
-          background: grey;
-          margin-left: 10px;
-        }
+      li {
+        display: inline-flex;
+        margin-left: 10px;
+        background: var(--desat-periwinkle);
+        height: 1.3em;
+        width: 50px;
+        padding-bottom: 1rem;
       }
     }
     &-tags {
-      display: flex;
-      flex-flow: row wrap;
-      margin-bottom: 30px;
+      display: inline-block;
+      overflow: hidden;
+      padding: 1rem 1rem 0.5rem 1rem;
 
       li {
         display: inline-flex;
         margin-right: 10px;
-        margin-bottom: 10px;
-        background: grey;
-        height: 24px;
+        background: var(--desat-periwinkle);
+        height: 0.7em;
         width: 90px;
-        border-radius: 9px;
       }
     }
   }
@@ -97,26 +71,19 @@ const StyledSkeleton = styled.div`
 export const SkeletonCard = ({ type }) => {
   return (
     <StyledSkeleton>
-      <div className="skeleton-container">
-        <div className="skeleton-title">
-          <div className="skeleton-title-text"></div>
-          <div className="skeleton-title-num"></div>
-        </div>
+      <div className="skeleton-card__inner">
         <div className="skeleton-thumb"></div>
-        <div className="skeleton-info-container">
-          <ul className="skeleton-tags">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <div className="skeleton-view-links">
-            <div className="skeleton-view-links-text"></div>
-            <ul className="skeleton-view-links-icons">
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+        <ul className="skeleton-tags">
+          <li></li>
+          <li></li>
+        </ul>
+        <div className="skeleton-title">
+          <div className="skeleton-title__bg" />
         </div>
+        <ul className="skeleton-view-links">
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </StyledSkeleton>
   );
