@@ -4,7 +4,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   ${reset}
   :root {
-    --sans-serif: 'Arimo', sans-serif;
+    --body: 'Epilogue', sans-serif;
+    --tags: 'Inter', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
     --dark-grey: #030302;
@@ -27,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     min-height: 100vh;
     font-weight: 400;
-    font-family: var(--sans-serif);
+    font-family: var(--body);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.9px;
@@ -43,31 +44,24 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.94em;
     line-height: 1.54em;
     padding-top: 0.429em;
-    margin-bottom: 0.343em;
-    font-weight: 600;
   }
   
   h2 {
     font-size: 1.56em;
     line-height: 1.93em;
     padding-top: 0.607em;
-    margin-bottom: 0.357em;
-    font-weight: 600;
   }
   
   h3 {
     font-size: 1.28em;
     line-height: 1.17em;
     padding-top: 0.261em;
-    margin-bottom: 0.913em;
-    font-weight: 600;
   }
   
   h4 {
     font-size: 1.00em;
     line-height: 1.50em;
     padding-top: 0.389em;
-    margin-bottom: 1.11em;
   }
 
   main {
@@ -78,7 +72,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.00em;
     line-height: 1.50em;
     padding-top: 0.389em;
-    margin-bottom: 1.11em;
   }
 
   a, a:visited {
