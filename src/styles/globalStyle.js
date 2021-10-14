@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     --yellow: #e5be4c;
     --white: #fff;
     --periwinkle: #d2a7ff;
+    --desat-periwinkle: #72578f;
   }
   *,
   *:before,
