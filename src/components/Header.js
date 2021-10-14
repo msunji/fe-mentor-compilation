@@ -26,7 +26,9 @@ const TextContainer = styled(Container)`
   h1 {
     padding-top: 0;
     font-weight: 700;
+    font-size: 1.4em;
     color: var(--periwinkle);
+    line-height: 1.3;
   }
 `;
 

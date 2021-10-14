@@ -43,17 +43,6 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     flex-direction: column;
   }
-  h1 {
-    font-size: 1.94em;
-    line-height: 1.54em;
-    padding-top: 0.429em;
-  }
-  
-  h2 {
-    font-size: 1.56em;
-    line-height: 1.93em;
-    padding-top: 0.607em;
-  }
   
   h3 {
     font-size: 1.28em;
