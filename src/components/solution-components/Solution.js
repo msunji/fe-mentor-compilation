@@ -1,143 +1,140 @@
 import styled from "styled-components";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-const SolutionBlock = styled.div`
+const SolutionCard = styled.div`
   overflow: hidden;
-  padding: 4rem;
-  background: white;
-  min-width: 0;
-  display: grid;
-  grid-template-rows: min-content 1fr auto auto;
+  background: var(--dark-desat-blue);
+  color: rgb(247, 245, 248);
+  width: 100%;
 
-  border-bottom: 1px solid var(--dark-grey);
-  border-right: none;
-
-  @media screen and (min-width: 740px) and (max-width: 1099px) {
-    &:not(:nth-child(2n)) {
-      border-right: 1px solid var(--dark-grey);
-    }
+  .solution-card__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 
+  @media screen and (min-width: 680px) and (max-width: 1199px) {
+    width: calc(1 / 2 * 100% - 20px);
+  }
   @media screen and (min-width: 1100px) {
-    &:not(:nth-child(3n)) {
-      border-right: 1px solid var(--dark-grey);
-    }
+    width: calc(1 / 3 * 100% - 20px);
   }
 `;
 
-const Thumb = styled.div`
+const SolutionThumb = styled.div`
   background: var(--dark-grey);
-  min-height: 250px;
+  height: 220px;
   width: 100%;
   background-image: url(${(props) => props.bg});
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  margin-bottom: 1.5rem;
+  background-position: center center;
 `;
 
-const Tags = styled.ul`
-  margin-bottom: 1rem;
-  li {
-    display: inline-block;
-    background: var(--dark-grey);
-    border: 2px solid var(--dark-grey);
-    border-radius: 9px;
-    font-size: 0.8em;
-    padding: 3px 15px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    color: white;
+const SolutionTags = styled.ul`
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 500;
+  display: inline-block;
+  overflow: hidden;
+  font-family: var(--tags);
+  letter-spacing: 1.9px;
+  padding: 1rem 1rem 0.5rem 1rem;
+  color: var(--periwinkle);
+
+  li:not(:last-of-type) {
+    margin-right: 3px;
   }
 `;
 
-const Links = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+const SolutionTitle = styled.div`
+  padding: 0rem 1rem 0.5rem 1rem;
+  flex-grow: 1;
 
   p {
     font-weight: 700;
-    margin-bottom: 0;
     padding-top: 0;
-    font-size: 2em;
+    letter-spacing: 0.9px;
+    font-size: 1.4em;
+    line-height: 1.25;
   }
+`;
+
+const SolutionLinks = styled.div`
+  padding: 0.5em 1rem 1rem 1rem;
+  font-family: var(--tags);
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  align-self: flex-end;
+  gap: 5px;
+  list-style-type: none;
 
   li {
-    font-size: 2em;
     display: inline-flex;
     align-items: center;
+    margin-left: 10px;
+
+    a {
+      display: flex;
+    }
 
     svg {
       margin-right: 6px;
+      font-size: 1.3em;
+      transition: fill 0.4s easeInOut;
     }
     a,
     a:visited {
-      transition: all 0.4s ease;
-      color: var(--dark-grey);
+      transition: all 0.3s ease-out 0.3s;
+      color: var(--yellow);
     }
 
     a:hover,
     a:focus {
-      color: var(--yellow);
+      color: #fff;
     }
   }
 `;
 
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  .num {
-    padding: 0;
-    margin: 0;
-    font-size: 4.5em;
-    font-weight: 700;
-  }
-`;
-
-const Title = styled.p`
-  font-weight: 600;
-  font-size: 1.2em;
-  line-height: 1.1;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 0.8rem;
-  margin: 0;
-  text-transform: uppercase;
-`;
-
 export const Solution = ({ data }) => {
   return (
-    <SolutionBlock>
-      <Header>
-        <Title>{data.challenge}</Title>
-        <p className="num">{data.numKey}</p>
-      </Header>
+    <SolutionCard>
+      <div className="solution-card__inner">
+        <SolutionThumb bg={data.thumb[0].url} />
 
-      <Thumb bg={data.thumb[0].url} />
-      <Tags>
-        {data.built.map((builtwith) => (
-          <li key={builtwith} className="tag">
-            {builtwith}
-          </li>
-        ))}
-      </Tags>
+        <SolutionTags>
+          {data.built.map((builtwith, i) => (
+            <li key={builtwith} className="tag">
+              {builtwith}
+              {i !== data.built.length - 1 ? ", " : ""}
+            </li>
+          ))}
+        </SolutionTags>
+        <SolutionTitle>
+          <p className="challenge-name">{data.challenge}</p>
+        </SolutionTitle>
 
-      <Links>
-        <p>View</p>
-        <div className="line"></div>
-        <ul>
+        <SolutionLinks>
           <li>
             <a href={data.repo}>
-              <FiGithub alt="View Repo" />
+              <span>
+                <FiGithub />
+              </span>
+              Code
             </a>
           </li>
           <li>
             <a href={data.live}>
-              <FiExternalLink alt="View Live Site" />
+              <span>
+                <FiExternalLink />
+              </span>
+              Site
             </a>
           </li>
-        </ul>
-      </Links>
-    </SolutionBlock>
+        </SolutionLinks>
+      </div>
+    </SolutionCard>
   );
 };
