@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Container } from "./Container";
-import { FaLinkedin, FaGithubAlt } from "react-icons/fa";
 
 const StyledFooter = styled.footer`
   color: var(--white);
@@ -35,19 +34,25 @@ const FooterLinks = styled.ul`
   justify-content: flex-start;
   line-height: 1;
 
-  li:first-of-type {
-    margin-right: 20px;
-  }
+  li {
+    margin-right: 10px;
 
-  svg {
-    font-size: 1.5em;
-    color: var(--periwinkle);
-    transition: all 0.4s ease-in;
+    &:not(:last-of-type)::after {
+      content: "/";
+      margin-left: 10px;
+      color: var(--periwinkle);
+    }
   }
-
-  svg:hover,
-  svg:focus {
+  a,
+  a:visited {
     color: var(--yellow);
+    transition: all 0.4s ease;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--periwinkle);
+    border-bottom: 1px solid var(--periwinkle);
   }
 `;
 
@@ -58,14 +63,13 @@ export const Footer = () => {
         <p>Find me elsewhere</p>
         <FooterLinks>
           <li>
-            <a href="https://github.com/msunji">
-              <FaGithubAlt />
-            </a>
+            <a href="https://github.com/msunji">Github</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/mconsunji/">
-              <FaLinkedin />
-            </a>
+            <a href="https://www.linkedin.com/in/mconsunji/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mconsunji/">Portfolio</a>
           </li>
         </FooterLinks>
       </Container>
