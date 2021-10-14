@@ -6,6 +6,18 @@ const StyledSkeleton = styled.div`
   color: rgb(247, 245, 248);
   width: 100%;
 
+  @keyframes pulse {
+    0% {
+      background-color: var(--desat-periwinkle);
+    }
+    50% {
+      background-color: #b28bdb;
+    }
+    100% {
+      background-color: var(--desat-periwinkle);
+    }
+  }
+
   .skeleton-card__inner {
     display: flex;
     flex-direction: column;
@@ -22,10 +34,9 @@ const StyledSkeleton = styled.div`
 
   .skeleton {
     &-thumb {
-      background: var(--dark-grey);
       height: 220px;
       width: 100%;
-      background: var(--desat-periwinkle);
+      animation: pulse linear 2s infinite;
     }
     &-title {
       padding: 0rem 1rem 0.5rem 1rem;
@@ -33,7 +44,7 @@ const StyledSkeleton = styled.div`
 
       &__bg {
         height: 1.4rem;
-        background: var(--desat-periwinkle);
+        animation: pulse linear 2s infinite;
       }
     }
     &-view-links {
@@ -45,7 +56,7 @@ const StyledSkeleton = styled.div`
       li {
         display: inline-flex;
         margin-left: 10px;
-        background: var(--desat-periwinkle);
+        animation: pulse linear 2s infinite;
         height: 1.3em;
         width: 50px;
         padding-bottom: 1rem;
@@ -59,7 +70,7 @@ const StyledSkeleton = styled.div`
       li {
         display: inline-flex;
         margin-right: 10px;
-        background: var(--desat-periwinkle);
+        animation: pulse linear 2s infinite;
         height: 0.7em;
         width: 90px;
       }
