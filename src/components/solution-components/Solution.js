@@ -61,14 +61,13 @@ const SolutionTitle = styled.div`
   }
 `;
 
-const SolutionLinks = styled.div`
+const SolutionLinks = styled.ul`
   padding: 0.5em 1rem 1rem 1rem;
   font-family: var(--tags);
   font-size: 0.8em;
   font-weight: 500;
   text-transform: uppercase;
   align-self: flex-end;
-  gap: 5px;
   list-style-type: none;
 
   li {
