@@ -8,16 +8,17 @@ const GlobalStyle = createGlobalStyle`
     --tags: 'Inter', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
-    --dark-grey: #030302;
-    --brown: rgb(100 76 59);
-    --blue: rgb(0,99,161);
-    --yellow: #fcde67;
+    --dark-grey: #201A2E;
+    --dark-desat-blue: #262446;
+    --dark-brown: #302207;
+    --yellow: #e5be4c;
     --white: #fff;
+    --periwinkle: #d2a7ff;
   }
   *,
   *:before,
   *:after {
-    box-sizing: border-box
+    box-sizing: border-box;
   }
   * {
     -webkit-font-smoothing: antialiased;
@@ -32,7 +33,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.9px;
-    color: var(--dark-grey);
+    background: var(--dark-grey);
+    text-rendering: optimizeLegibility;
   }
 
   #root {
@@ -77,7 +79,7 @@ const GlobalStyle = createGlobalStyle`
   a, a:visited {
     text-decoration: none;
     color: var(--blue);
-    font-weight: 600;
+    font-weight: 500;
   }
 `;
 
