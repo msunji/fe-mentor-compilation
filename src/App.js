@@ -1,5 +1,5 @@
 import GlobalStyle from "./styles/globalStyle";
-import { IntroText } from "./components/IntroText";
+import { Header } from "./components/Header";
 import { Solutions } from "./components/solution-components/Solutions";
 import { Footer } from "./components/layout/Footer";
 
@@ -9,7 +9,7 @@ function App() {
       {/* <Nav /> */}
       <GlobalStyle />
       <main>
-        <IntroText />
+        <Header />
         <Solutions />
       </main>
       <Footer />
