@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Skeleton from "react-loading-skeleton";
 
 const StyledSkeleton = styled.div`
   overflow: hidden;
