@@ -93,7 +93,7 @@ const SolutionLinks = styled.div`
 
     a:hover,
     a:focus {
-      color: #fff;
+      color: var(--periwinkle);
     }
   }
 `;

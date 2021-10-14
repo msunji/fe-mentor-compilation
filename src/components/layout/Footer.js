@@ -3,13 +3,29 @@ import { Container } from "./Container";
 import { FaLinkedin, FaGithubAlt } from "react-icons/fa";
 
 const StyledFooter = styled.footer`
-  background: var(--dark-grey);
   color: var(--white);
   padding: calc(2 * var(--padding-y)) 0;
   font-size: 0.9em;
+  margin-top: 3rem;
 
-  h3 {
+  p {
     text-transform: uppercase;
+    font-family: var(--tags);
+    color: var(--periwinkle);
+    letter-spacing: 1.9px;
+    margin-bottom: 1.3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 100px;
+      height: 1px;
+      background: var(--periwinkle);
+      margin-right: 1rem;
+    }
   }
 `;
 
@@ -24,8 +40,8 @@ const FooterLinks = styled.ul`
   }
 
   svg {
-    font-size: 2.2em;
-    color: var(--white);
+    font-size: 1.5em;
+    color: var(--periwinkle);
     transition: all 0.4s ease-in;
   }
 
@@ -39,7 +55,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <h3>Find me elsewhere</h3>
+        <p>Find me elsewhere</p>
         <FooterLinks>
           <li>
             <a href="https://github.com/msunji">
