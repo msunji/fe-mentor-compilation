@@ -24,9 +24,8 @@ const Text = styled.section`
 
 const TextContainer = styled(Container)`
   h1 {
-    padding-top: 0;
     font-weight: 700;
-    font-size: 1.4em;
+    font-size: clamp(1.46rem, 1.2059rem + 1.1294vw, 1.7rem);
     color: var(--periwinkle);
     line-height: 1.3;
   }
