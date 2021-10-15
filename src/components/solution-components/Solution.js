@@ -36,35 +36,37 @@ const SolutionTags = styled.ul`
   text-transform: uppercase;
   font-size: 0.7em;
   font-weight: 500;
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
   overflow: hidden;
   font-family: var(--tags);
-  letter-spacing: 1.9px;
+  letter-spacing: 1.2px;
   padding: 1rem 1rem 0.5rem 1rem;
   color: var(--periwinkle);
 
   li:not(:last-of-type) {
-    margin-right: 3px;
+    margin-right: 2px;
   }
 `;
 
 const SolutionTitle = styled.div`
   padding: 0rem 1rem 0.5rem 1rem;
   flex-grow: 1;
+  margin-bottom: 0.3rem;
 
-  p {
+  h2 {
     font-weight: 700;
     padding-top: 0;
     letter-spacing: 0.9px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 1.25;
   }
 `;
 
 const SolutionLinks = styled.ul`
   padding: 0.5em 1rem 1rem 1rem;
-  font-family: var(--tags);
-  font-size: 0.8em;
+  font-family: var(--inter);
+  font-size: 0.83em;
   font-weight: 500;
   text-transform: uppercase;
   align-self: flex-end;
@@ -112,7 +114,7 @@ export const Solution = ({ data }) => {
           ))}
         </SolutionTags>
         <SolutionTitle>
-          <p className="challenge-name">{data.challenge}</p>
+          <h2 className="challenge-name">{data.challenge}</h2>
         </SolutionTitle>
 
         <SolutionLinks>
