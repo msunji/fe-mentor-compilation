@@ -4,8 +4,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   ${reset}
   :root {
-    --body: 'Epilogue', sans-serif;
-    --tags: 'Inter', sans-serif;
+    --epilogue: 'Epilogue', sans-serif;
+    --inter: 'Inter', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
     --dark-grey: #201A2E;
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     min-height: 100vh;
     font-weight: 400;
-    font-family: var(--body);
+    font-family: var(--inter);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.9px;
@@ -43,19 +43,11 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     flex-direction: column;
   }
-  
-  h3 {
-    font-size: 1.28em;
-    line-height: 1.17em;
-    padding-top: 0.261em;
-  }
-  
-  h4 {
-    font-size: 1.00em;
-    line-height: 1.50em;
-    padding-top: 0.389em;
-  }
 
+  h1, h2, h3, h4 {
+    font-family: var(--epilogue);
+  }
+  
   main {
     flex: 1;
   }
