@@ -14,7 +14,7 @@ const SolutionCard = styled.div`
     height: 100%;
   }
 
-  @media screen and (min-width: 680px) and (max-width: 1199px) {
+  @media screen and (min-width: 640px) and (max-width: 1199px) {
     width: calc(1 / 2 * 100% - 20px);
   }
   @media screen and (min-width: 1100px) {
@@ -22,14 +22,9 @@ const SolutionCard = styled.div`
   }
 `;
 
-const SolutionThumb = styled.div`
-  background: var(--dark-grey);
-  height: 220px;
+const SolutionThumb = styled.img`
   width: 100%;
-  background-image: url(${(props) => props.bg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  object-fit: cover;
 `;
 
 const SolutionTags = styled.ul`
@@ -103,7 +98,7 @@ export const Solution = ({ data }) => {
   return (
     <SolutionCard>
       <div className="solution-card__inner">
-        <SolutionThumb bg={data.thumb[0].url} />
+        <SolutionThumb src={data.thumbDesktop[0].url} alt={data.challenge} />
 
         <SolutionTags>
           {data.built.map((builtwith, i) => (
