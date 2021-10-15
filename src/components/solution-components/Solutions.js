@@ -12,9 +12,16 @@ const SolutionsSection = styled.section`
 
 const SolutionsContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  @media screen and (min-width: 640px) and (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const Solutions = () => {

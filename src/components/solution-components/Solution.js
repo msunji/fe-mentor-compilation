@@ -13,13 +13,6 @@ const SolutionCard = styled.div`
     width: 100%;
     height: 100%;
   }
-
-  @media screen and (min-width: 640px) and (max-width: 1199px) {
-    width: calc(1 / 2 * 100% - 20px);
-  }
-  @media screen and (min-width: 1100px) {
-    width: calc(1 / 3 * 100% - 20px);
-  }
 `;
 
 const SolutionThumb = styled.img`
