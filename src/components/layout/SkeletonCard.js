@@ -25,11 +25,11 @@ const StyledSkeleton = styled.div`
     height: 100%;
   }
 
-  @media screen and (min-width: 680px) and (max-width: 1199px) {
-    width: calc(1 / 2 * 100% - 20px);
+  @media screen and (min-width: 640px) and (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
   }
   @media screen and (min-width: 1100px) {
-    width: calc(1 / 3 * 100% - 20px);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .skeleton {
