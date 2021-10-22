@@ -1,7 +1,6 @@
 import GlobalStyle from "./styles/globalStyle";
 import { Header } from "./components/Header";
 import { Solutions } from "./components/solution-components/Solutions";
-import { Footer } from "./components/layout/Footer";
 import styled from "styled-components";
 
 const SiteGrid = styled.main`
@@ -18,9 +17,10 @@ const SiteContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 1000px) {
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
   }
 `;
 
