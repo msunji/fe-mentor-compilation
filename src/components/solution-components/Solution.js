@@ -5,6 +5,7 @@ const SolutionCard = styled.div`
   overflow: hidden;
   background: var(--white);
   width: 100%;
+  border-radius: 10px;
 
   .solution-card__inner {
     display: flex;
@@ -12,16 +13,12 @@ const SolutionCard = styled.div`
     width: 100%;
     height: 100%;
   }
-
-  &:hover {
-    transform: scale(1.09);
-  }
 `;
 
 const SolutionThumb = styled.img`
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px 0 0 0 10px;
 `;
 
 const SolutionTags = styled.ul`
@@ -47,9 +44,10 @@ const SolutionTitle = styled.div`
 
   h2 {
     padding-top: 0;
-    letter-spacing: 0.9px;
-    font-size: 1.3em;
+    letter-spacing: -0.5px;
+    font-size: 1.25em;
     line-height: 1.25;
+    font-weight: 600;
   }
 `;
 
