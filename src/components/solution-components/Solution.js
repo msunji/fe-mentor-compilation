@@ -71,17 +71,6 @@ const SolutionLinks = styled.ul`
     svg {
       margin-right: 6px;
       font-size: 1.3em;
-      transition: fill 0.4s easeInOut;
-    }
-    a,
-    a:visited {
-      transition: all 0.3s ease-out 0.3s;
-      color: var(--yellow);
-    }
-
-    a:hover,
-    a:focus {
-      color: var(--periwinkle);
     }
   }
 `;
