@@ -6,8 +6,32 @@ const Text = styled.section`
   h1 {
     font-weight: 700;
     font-size: clamp(1.46rem, 1.2059rem + 1.1294vw, 1.7rem);
-    line-height: 1.3;
+    line-height: 1.11;
   }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .links-out {
+    a {
+      display: inline-flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        margin-right: 10px;
+        background: var(--bunting);
+        height: 1px;
+      }
+    }
+  }
+
   @media screen and (min-width: 1000px) {
     max-width: 300px;
     display: flex;
@@ -27,7 +51,10 @@ export const Header = () => {
         site. This is a work in progress, so expect to see more changes as I
         progress through more challenges.
       </p>
-      <p>Portoflio / Github / Repo for this site</p>
+      <div className="links-out">
+        <a href="http://mconsunji.com">Portfolio</a>
+        <a href="https://github.com/msunji">Github</a>
+      </div>
     </Text>
   );
 };
