@@ -10,10 +10,9 @@ const GlobalStyle = createGlobalStyle`
     --padding-x: 2rem;
     --merino: #f1ead9;
     --bunting: #172851;
-    --desat-grey: #E1E0D4;
-    --blue: #3914a5;
-    --dark-brown: #302207;
-    --orange: #e4552a;
+    --brick: #d1570f;
+    --desat-blue-grey: #7b98bd;
+    --blue: #1432a5;
     --white: #fff;
   }
   *,
@@ -59,11 +58,19 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0.389em;
     font-family: var(--body-text);
   }
-
-  a, a:visited {
+  a {
     text-decoration: none;
-    color: var(--blue);
-    font-weight: 500;
+    color: var(--brick);
+    transition: color 0.4s ease-in;
+
+    &:visited {
+      text-decoration: none;
+      color: var(--brick);
+    }
+
+    &:hover {
+      color: var(--desat-blue-grey);
+    }
   }
 `;
 
