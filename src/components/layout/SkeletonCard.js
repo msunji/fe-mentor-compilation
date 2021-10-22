@@ -2,19 +2,20 @@ import styled from "styled-components";
 
 const StyledSkeleton = styled.div`
   overflow: hidden;
-  background: var(--dark-desat-blue);
+  background: var(--white);
   color: rgb(247, 245, 248);
   width: 100%;
+  border-radius: 10px;
 
   @keyframes pulse {
     0% {
-      background-color: var(--desat-periwinkle);
+      background-color: var(--merino);
     }
     50% {
-      background-color: #b28bdb;
+      background-color: #dfc88f;
     }
     100% {
-      background-color: var(--desat-periwinkle);
+      background-color: var(--merino);
     }
   }
 
@@ -34,9 +35,10 @@ const StyledSkeleton = styled.div`
 
   .skeleton {
     &-thumb {
-      height: 220px;
+      height: 181px;
       width: 100%;
       animation: pulse linear 2s infinite;
+      border-radius: 10px 10px 0 0px;
     }
     &-title {
       padding: 0rem 1rem 0.5rem 1rem;
