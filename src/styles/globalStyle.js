@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     --body-text: 'Roboto', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
+    --light-grey: #F1F1F1;
     --dark-grey: #191A2C;
     --dark-desat-blue: #262446;
     --dark-brown: #302207;
