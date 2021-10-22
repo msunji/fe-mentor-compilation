@@ -3,8 +3,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const SolutionCard = styled.div`
   overflow: hidden;
-  background: var(--dark-desat-blue);
-  color: rgb(247, 245, 248);
+  background: var(--white);
   width: 100%;
 
   .solution-card__inner {
@@ -13,24 +12,28 @@ const SolutionCard = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  &:hover {
+    transform: scale(1.09);
+  }
 `;
 
 const SolutionThumb = styled.img`
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 `;
 
 const SolutionTags = styled.ul`
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 0.75em;
   font-weight: 500;
   display: inline-flex;
   flex-wrap: wrap;
   overflow: hidden;
-  font-family: var(--tags);
+  font-family: var(--body-text);
   letter-spacing: 1.2px;
   padding: 1rem 1rem 0.5rem 1rem;
-  color: var(--periwinkle);
 
   li:not(:last-of-type) {
     margin-right: 2px;
@@ -43,7 +46,6 @@ const SolutionTitle = styled.div`
   margin-bottom: 0.3rem;
 
   h2 {
-    font-weight: 700;
     padding-top: 0;
     letter-spacing: 0.9px;
     font-size: 1.3em;
@@ -53,7 +55,6 @@ const SolutionTitle = styled.div`
 
 const SolutionLinks = styled.ul`
   padding: 0.5em 1rem 1rem 1rem;
-  font-family: var(--inter);
   font-size: 0.83em;
   font-weight: 500;
   text-transform: uppercase;

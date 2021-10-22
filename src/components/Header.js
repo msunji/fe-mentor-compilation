@@ -3,7 +3,6 @@ import { Container } from "./layout/Container";
 
 const Text = styled.section`
   padding: calc(2.5 * var(--padding-y)) 0;
-  color: white;
   position: relative;
 
   &::before {
