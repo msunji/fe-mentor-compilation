@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const SiteGrid = styled.main`
   display: grid;
-  grid-template-columns: 1fr min(95%, 1500px) 1fr;
+  grid-template-columns: 1fr min(92%, 1500px) 1fr;
 
   > * {
     grid-column: 2;
