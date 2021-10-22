@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --merino: #f1ead9;
     --bunting: #172851;
     --desat-grey: #E1E0D4;
-    --dark-blue: #28284d;
+    --blue: #3914a5;
     --dark-brown: #302207;
     --orange: #e4552a;
     --white: #fff;
@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4 {
     font-family: var(--header-text);
-    color: var(--orange);
+    color: var(--blue);
   }
   
   main {
