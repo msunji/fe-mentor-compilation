@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { Solution } from "./Solution";
 
 const SolutionsSection = styled.section`
-  max-width: 600px;
   padding: 2rem 0;
 
   @media screen and (min-width: 1000px) {
+    max-width: 600px;
     position: absolute;
     right: 0;
   }
@@ -19,7 +19,7 @@ const SolutionsContainer = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 20px;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
   }
   // @media screen and (min-width: 1100px) {
