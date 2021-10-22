@@ -4,10 +4,13 @@ import { useEffect, useState } from "react";
 import { Solution } from "./Solution";
 
 const SolutionsSection = styled.section`
-  width: 80%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 600px;
+  padding: 2rem 0;
+
+  @media screen and (min-width: 1000px) {
+    position: absolute;
+    right: 0;
+  }
 `;
 
 const SolutionsContainer = styled.div`
@@ -16,12 +19,12 @@ const SolutionsContainer = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 20px;
 
-  @media screen and (min-width: 640px) and (max-width: 1199px) {
+  @media screen and (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media screen and (min-width: 1100px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  // @media screen and (min-width: 1100px) {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 `;
 
 export const Solutions = () => {
