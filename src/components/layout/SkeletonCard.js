@@ -2,20 +2,20 @@ import styled from "styled-components";
 
 const StyledSkeleton = styled.div`
   overflow: hidden;
-  background: var(--white);
+  background: var(--off-white);
   color: rgb(247, 245, 248);
   width: 100%;
   border-radius: 10px;
 
   @keyframes pulse {
     0% {
-      background-color: var(--merino);
+      background-color: var(--beige);
     }
     50% {
-      background-color: #dfc88f;
+      background-color: #d7b09a;
     }
     100% {
-      background-color: var(--merino);
+      background-color: var(--beige);
     }
   }
 
@@ -80,7 +80,7 @@ const StyledSkeleton = styled.div`
   }
 `;
 
-export const SkeletonCard = ({ type }) => {
+export const SkeletonCard = () => {
   return (
     <StyledSkeleton>
       <div className="skeleton-card__inner">
