@@ -7,6 +7,8 @@ const Text = styled.section`
     font-weight: 700;
     font-size: clamp(1.46rem, 1.2059rem + 1.1294vw, 1.7rem);
     line-height: 1.11;
+    margin-bottom: 0.5rem;
+    color: var(--brick);
   }
 
   p {
@@ -17,6 +19,11 @@ const Text = styled.section`
     a {
       display: inline-flex;
       align-items: center;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
 
       &:not(:last-of-type) {
         margin-right: 10px;
@@ -26,7 +33,7 @@ const Text = styled.section`
         display: block;
         width: 20px;
         margin-right: 10px;
-        background: var(--bunting);
+        background: var(--grey);
         height: 1px;
       }
     }
