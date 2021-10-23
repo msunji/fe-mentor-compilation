@@ -8,12 +8,13 @@ const GlobalStyle = createGlobalStyle`
     --body-text: 'Roboto', sans-serif;
     --padding-y: 2rem;
     --padding-x: 2rem;
-    --merino: #f1ead9;
-    --bunting: #172851;
+    --off-white: #fffffe;
+    --beige: #faeee7;
+    --grey: #594a4e;
+    --desat-brown: #b58f7a;
+    --red: #ef2020;
     --brick: #d1570f;
-    --desat-blue-grey: #7b98bd;
-    --blue: #1432a5;
-    --white: #fff;
+    --dark-brick: #582a18;
   }
   *,
   *:before,
@@ -32,9 +33,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.9px;
-    background: var(--merino);
+    background: var(--beige);
     font-family: var(--body-text);
-    color: var(--bunting);
+    color: var(--grey);
   }
 
   #root {
@@ -45,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4 {
     font-family: var(--header-text);
-    color: var(--blue);
+    color: var(--dark-brick);
   }
   
   main {
@@ -69,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &:hover {
-      color: var(--desat-blue-grey);
+      color: var(--red);
     }
   }
 `;
