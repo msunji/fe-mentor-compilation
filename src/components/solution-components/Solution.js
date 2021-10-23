@@ -3,7 +3,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const SolutionCard = styled.div`
   overflow: hidden;
-  background: var(--white);
+  background: var(--off-white);
   width: 100%;
   border-radius: 10px;
 
@@ -31,6 +31,7 @@ const SolutionTags = styled.ul`
   font-family: var(--body-text);
   letter-spacing: 1.2px;
   padding: 1rem 1rem 0.5rem 1rem;
+  color: var(--desat-brown);
 
   li:not(:last-of-type) {
     margin-right: 2px;
