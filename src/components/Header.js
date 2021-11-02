@@ -54,9 +54,9 @@ export const Header = () => {
     <Text>
       <h1>Frontend Mentor Solutions</h1>
       <p>
-        Links are provided for each project's respective Github repo and live
-        site. This is a work in progress, so expect to see more changes as I
-        progress through more challenges.
+        Links are provided for each project's Github repo and live site. This is
+        a work in progress, so expect to see more changes as I progress through
+        more challenges.
       </p>
       <div className="links-out">
         <a href="http://mconsunji.com">Portfolio</a>
