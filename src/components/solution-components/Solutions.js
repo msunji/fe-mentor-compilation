@@ -51,7 +51,7 @@ export const Solutions = () => {
           ? solutions.map((solution) => (
               <Solution key={solution.id} data={solution} />
             ))
-          : [1, 2, 3].map((_, i) => <SkeletonCard key={i} />)}
+          : [1, 2, 3, 4].map((_, i) => <SkeletonCard key={i} />)}
       </SolutionsContainer>
     </SolutionsSection>
   );
