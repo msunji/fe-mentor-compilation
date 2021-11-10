@@ -62,15 +62,17 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--brick);
-    transition: color 0.4s ease-in;
+    transition: color 0.4s ease;
 
     &:visited {
       text-decoration: none;
       color: var(--brick);
     }
 
-    &:hover {
-      color: var(--red);
+    &:hover,
+    &:active
+     {
+      color: var(--dark-brick);
     }
   }
 `;
