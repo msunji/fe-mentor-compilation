@@ -11,6 +11,11 @@ const SolutionsSection = styled.section`
     position: absolute;
     right: 0;
   }
+  @media screen and (min-width: 1200px) {
+    max-width: 750px;
+    position: absolute;
+    right: 0;
+  }
 `;
 
 const SolutionsContainer = styled.div`
@@ -22,9 +27,9 @@ const SolutionsContainer = styled.div`
   @media screen and (min-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  // @media screen and (min-width: 1100px) {
-  //   grid-template-columns: repeat(3, 1fr);
-  // }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const Solutions = () => {
