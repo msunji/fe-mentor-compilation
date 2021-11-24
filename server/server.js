@@ -4,7 +4,7 @@ const PORT = 3001;
 
 const { getSolutions } = require('./db-connection');
 
-app.get('/solutions', async (req, res) => {
+app.get('/api/solutions', async (req, res) => {
   try {
     const solutionData = await getSolutions();
     res.status(200).send(solutionData);
