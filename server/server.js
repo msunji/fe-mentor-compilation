@@ -7,9 +7,9 @@ const { getSolutions } = require('./db-connection');
 app.get('/solutions', async (req, res) => {
   try {
     const solutionData = await getSolutions();
-    res.status(200).send({ solutions: solutionData });
+    res.status(200).send(solutionData);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(400).send(err);
   }
 
 });
