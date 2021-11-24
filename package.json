@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "concurrently \"cd server && yarn run dev\" && \"cd client && yarn run start\""
+  },
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^6.4.0"
