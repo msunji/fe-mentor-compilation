@@ -34,7 +34,6 @@ function App() {
           <Solutions />
         </SiteContent>
       </SiteGrid>
-      {/* <Footer /> */}
     </>
   );
 }
