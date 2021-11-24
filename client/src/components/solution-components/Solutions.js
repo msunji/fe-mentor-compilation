@@ -1,7 +1,8 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-// import { SkeletonCard } from "../layout/SkeletonCard";
-// import { useEffect, useState } from "react";
-// import { Solution } from "./Solution";
+import { SkeletonCard } from "../layout/SkeletonCard";
+import { Solution } from "./Solution";
 
 const SolutionsSection = styled.section`
   padding: 2rem 0;
@@ -33,32 +34,30 @@ const SolutionsContainer = styled.div`
 `;
 
 export const Solutions = () => {
-  // const [solutions, setSolutions] = useState([]);
+  const [solutions, setSolutions] = useState([]);
 
-  // const loadSolutions = async () => {
-  //   try {
-  //     const res = await fetch("/api/solutions");
-  //     const solns = await res.json();
-  //     setSolutions(solns);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  const loadSolutions = async () => {
+    try {
+      const response = await axios.get("/api/solutions");
+      setSolutions(response.data.solutions);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-  // useEffect(() => {
-  //   loadSolutions();
-  // }, []);
+  useEffect(() => {
+    loadSolutions();
+  }, []);
 
   return (
     <SolutionsSection>
-      <p>test</p>
-      {/* <SolutionsContainer>
+      <SolutionsContainer>
         {solutions.length
           ? solutions.map((solution) => (
               <Solution key={solution.id} data={solution} />
             ))
           : [1, 2, 3, 4].map((_, i) => <SkeletonCard key={i} />)}
-      </SolutionsContainer> */}
+      </SolutionsContainer>
     </SolutionsSection>
   );
 };
