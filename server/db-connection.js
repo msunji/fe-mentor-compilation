@@ -17,7 +17,7 @@ const getSolutions = async () => {
       ...solution.fields
     }));
 
-    return solutions;
+    return { solutions };
 
   } catch (err) {
     return {
