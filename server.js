@@ -19,4 +19,4 @@ app.get('/api/solutions', async (req, res) => {
 
 });
 
-app.listen(PORT, () => { console.log(`App listening at Port ${PORT}`)});
+app.listen(process.env.PORT || PORT, () => { console.log(`App listening at Port ${PORT}`)});
