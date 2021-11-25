@@ -1,4 +1,9 @@
 {
+  "name": "fe-mentor-compilation",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Marge C.",
+  "license": "ISC",
   "scripts": {
     "start": "concurrently \"cd server && yarn run dev\" \"cd client && yarn run start\""
   },
