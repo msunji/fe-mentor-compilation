@@ -10,7 +10,7 @@ I wanted to get more practice without having to come up with UI designs from scr
 This project is bootstrapped with CRA and styled with styled-components.
 
 ### Axios
-I used [Axios](https://axios-http.com/) to make requests to the API route I set up with Express.
+I used [Axios](https://axios-http.com/) to make requests to the route I set up with Express.
 
 ### Airtable API
 I had kept track of all the solutions I'd finished on Airtable, so I decided to use Airtable as a database to fetch data from. Luckily, Airtable offers an official JavaScript library called [airtable.js](https://github.com/airtable/airtable.js/) that's pretty straightforward to work with.
