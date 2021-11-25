@@ -4,6 +4,10 @@ const PORT = 3001;
 
 const { getSolutions } = require('./db-connection');
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+};
+
 app.get('/api/solutions', async (req, res) => {
   try {
     const solutionData = await getSolutions();
