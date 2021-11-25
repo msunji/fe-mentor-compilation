@@ -6,7 +6,7 @@ const PORT = 3001;
 const { getSolutions } = require('./db-connection');
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve(__dirname, '../client/build')));
+  app.use(express.static(path.resolve(__dirname, './client/build')));
 };
 
 app.get('/api/solutions', async (req, res) => {
@@ -19,4 +19,4 @@ app.get('/api/solutions', async (req, res) => {
 
 });
 
-app.listen(PORT, () => { console.log(`app listening at Port ${PORT}`)});
+app.listen(PORT, () => { console.log(`App listening at Port ${PORT}`)});
