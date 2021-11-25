@@ -16,8 +16,8 @@ I used [Axios](https://axios-http.com/) to make requests to the API route I set 
 I had kept track of all the solutions I'd finished on Airtable, so I decided to use Airtable as a database to fetch data from. Luckily, Airtable offers an official JavaScript library called [airtable.js](https://github.com/airtable/airtable.js/) that's pretty straightforward to work with.
 
 ### Node.js and Express
-With Airtable, each user is provided with an API key that has access to all their bases and records. So it probably isn't the best idea to have your API keys exposed on your front-end. 
-To solve this issue, I setup a Node.js + Express backend that makes a GET request to the Airtable API (instead of doing this in the frontend).
+Airtable provides you with an API key that has access to all your bases and records. So it probably isn't the best idea to have your API keys exposed on your frontend. To solve this issue, I setup a Node.js + Express backend that makes a GET request to the Airtable API (instead of doing this in the frontend).
+
 
 
 
