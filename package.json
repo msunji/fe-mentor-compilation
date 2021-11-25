@@ -1,14 +1,23 @@
 {
-  "name": "fe-mentor-compilation",
+  "name": "fe-mentor-backend",
   "version": "1.0.0",
   "description": "",
-  "author": "Marge C.",
-  "license": "ISC",
+  "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd server && yarn run start\" \"cd client && yarn run start\""
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "start:concurrently": "concurrently \"cd server && yarn run start\" \"cd client && yarn run start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "concurrently": "^6.4.0"
+    "airtable": "^0.11.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
