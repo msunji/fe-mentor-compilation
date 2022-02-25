@@ -1,0 +1,61 @@
+@use '../vars';
+
+section.solutions {
+  padding: 2rem 0;
+
+  @media screen and (min-width: 1000px) {
+    max-width: 600px;
+    position: absolute;
+    right: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 750px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+div.solutions-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  .card {
+    overflow: hidden;
+    background: vars.$off-white;
+    width: 100%;
+    border-radius: 10px;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+
+      // img {
+
+      // }
+
+      .tags {
+        text-transform: uppercase;
+        font-size: 0.75em;
+        font-weight: 500;
+        display: inline-flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        letter-spacing: 1.2px;
+        padding: 1rem 1rem 0.5rem 1rem;
+        color: vars.$desat-brown;
+
+        li:not(:last-of-type) {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
