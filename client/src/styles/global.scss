@@ -23,6 +23,16 @@ body {
   font-family: "Arial", ui-sans-serif, sans-serif;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 #root {
   display: flex;
   min-height: 100vh;
@@ -36,12 +46,9 @@ h4 {
   color: vars.$dark-brick;
 }
 
-main {
-  flex: 1;
-}
-
 ul,
 ol {
+  margin: 0;
   list-style-type: none;
 }
 
