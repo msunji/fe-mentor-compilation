@@ -1,19 +1,14 @@
 import "../../styles/components/solutions.scss";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-// const SolutionThumb = styled.img`
-//   width: 100%;
-//   object-fit: cover;
-//   border-radius: 10px 0 0 0 10px;
-// `;
-
 const Solution = ({ data }) => {
+  console.log(data);
   return (
     <div className="card">
       <div className="card__inner">
         <div className="thumb">
           <img
-            src={data.thumbDesktop[0].url}
+            src={data.thumbUrl}
             alt={data.challenge}
             width="500"
             height="313"
