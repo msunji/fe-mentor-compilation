@@ -2,7 +2,6 @@ import "../../styles/components/solutions.scss";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const Solution = ({ data }) => {
-  console.log(data);
   return (
     <div className="card">
       <div className="card__inner">
