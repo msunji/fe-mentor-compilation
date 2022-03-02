@@ -9,13 +9,13 @@
 
   @keyframes pulse {
     0% {
-      background-color: vars.$beige;
+      opacity: 0.2;
     }
     50% {
-      background-color: #d7b09a;
+      opacity: 0.6;
     }
     100% {
-      background-color: vars.$beige;
+      opacity: 0.2;
     }
   }
 
@@ -31,6 +31,7 @@
     max-height: 220px;
     width: 100%;
     animation: pulse linear 2s infinite;
+    background-color: vars.$brick;
     border-radius: 10px 10px 0 0px;
   }
   &__title {
@@ -40,6 +41,7 @@
     &-bg {
       height: 1.4rem;
       animation: pulse linear 2s infinite;
+      background-color: vars.$brick;
     }
   }
   &__view-links {
@@ -52,8 +54,9 @@
       display: inline-flex;
       margin-left: 10px;
       animation: pulse linear 2s infinite;
+      background-color: vars.$brick;
       height: 1.3em;
-      width: 50px;
+      width: 80px;
       padding-bottom: 1rem;
     }
   }
@@ -66,7 +69,8 @@
       display: inline-flex;
       margin-right: 10px;
       animation: pulse linear 2s infinite;
-      height: 0.7em;
+      background-color: vars.$brick;
+      height: 1em;
       width: 90px;
     }
   }
