@@ -43,7 +43,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: vars.$dark-brick;
+  color: vars.$brick-200;
 }
 
 ul,
@@ -59,16 +59,16 @@ p {
 }
 a {
   text-decoration: none;
-  color: vars.$brick;
+  color: vars.$brick-200;
   transition: color 0.4s ease;
 
   &:visited {
     text-decoration: none;
-    color: vars.$brick;
+    color: vars.$brick-200;
   }
 
   &:hover,
   &:active {
-    color: vars.$dark-brick;
+    color: vars.$grey;
   }
 }
